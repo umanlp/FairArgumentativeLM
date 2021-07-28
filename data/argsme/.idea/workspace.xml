@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="23d65c37-da88-4d35-a0e7-3ef21036fac2" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1rldBx8vnLhVQmMW1M3GCqDOH06" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\d067795\OneDrive - SAP SE\Documents\Master\Masterarbeit\Coding\Corpora\argsme" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.fine_tune_clm">
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="argsme" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\d067795\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fine_tune_clm (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="argsme" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\d067795\AppData\Local\Programs\Python\Python38-32\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fine_tune_clm.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="fine_tune_clm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="argsme" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\d067795\argsme\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/fine_tune_clm.py" />
+      <option name="PARAMETERS" value="--model_name_or_path gpt2 --train_file ft_training.txt --validation_file ft_test.txt --evaluation_strategy &quot;epoch&quot; --num_train_epochs 30 --do_train --do_eval --per_device_train_batch_size 64 --per_device_eval_batch_size 64 --no_cuda --learning_rate 2e-5 --weight_decay 0.01 --load_best_model_at_end True --dataloader_pin_memory True --output_dir /output_log" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.fine_tune_clm" />
+      <item itemvalue="Python.fine_tune_clm (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.fine_tune_clm" />
+        <item itemvalue="Python.fine_tune_clm (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="23d65c37-da88-4d35-a0e7-3ef21036fac2" name="Default Changelist" comment="" />
+      <created>1619554478687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619554478687</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="309" y="116" width="1089" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1619706108454">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="309" y="116" width="1089" height="705" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706108454" />
+    <state x="309" y="116" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.920@0.0.1707.920" timestamp="1619701155619" />
+    <state x="634" y="174" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1619701142165">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="634" y="174" key="#com.intellij.ide.macro.MacrosDialog/0.0.1707.920@0.0.1707.920" timestamp="1619701142165" />
+    <state x="634" y="202" key="FileChooserDialogImpl" timestamp="1619554639311">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="634" y="202" key="FileChooserDialogImpl/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619554639311" />
+    <state width="1685" height="74" key="GridCell.Tab.0.bottom" timestamp="1619768387240">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="300" key="GridCell.Tab.0.bottom/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706288787" />
+    <state width="1685" height="74" key="GridCell.Tab.0.bottom/0.0.1707.920@0.0.1707.920" timestamp="1619768387240" />
+    <state width="1685" height="74" key="GridCell.Tab.0.center" timestamp="1619768387240">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="300" key="GridCell.Tab.0.center/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706288787" />
+    <state width="1685" height="74" key="GridCell.Tab.0.center/0.0.1707.920@0.0.1707.920" timestamp="1619768387240" />
+    <state width="1685" height="74" key="GridCell.Tab.0.left" timestamp="1619768387240">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="300" key="GridCell.Tab.0.left/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706288787" />
+    <state width="1685" height="74" key="GridCell.Tab.0.left/0.0.1707.920@0.0.1707.920" timestamp="1619768387240" />
+    <state width="1685" height="74" key="GridCell.Tab.0.right" timestamp="1619768387240">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="300" key="GridCell.Tab.0.right/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706288787" />
+    <state width="1685" height="74" key="GridCell.Tab.0.right/0.0.1707.920@0.0.1707.920" timestamp="1619768387240" />
+    <state width="1685" height="74" key="GridCell.Tab.1.bottom" timestamp="1619768387241">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="300" key="GridCell.Tab.1.bottom/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706310980" />
+    <state width="1685" height="74" key="GridCell.Tab.1.bottom/0.0.1707.920@0.0.1707.920" timestamp="1619768387241" />
+    <state width="1685" height="74" key="GridCell.Tab.1.center" timestamp="1619768387241">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="300" key="GridCell.Tab.1.center/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706310980" />
+    <state width="1685" height="74" key="GridCell.Tab.1.center/0.0.1707.920@0.0.1707.920" timestamp="1619768387241" />
+    <state width="1685" height="74" key="GridCell.Tab.1.left" timestamp="1619768387241">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="300" key="GridCell.Tab.1.left/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706310980" />
+    <state width="1685" height="74" key="GridCell.Tab.1.left/0.0.1707.920@0.0.1707.920" timestamp="1619768387241" />
+    <state width="1685" height="74" key="GridCell.Tab.1.right" timestamp="1619768387241">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state width="1685" height="300" key="GridCell.Tab.1.right/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619706310980" />
+    <state width="1685" height="74" key="GridCell.Tab.1.right/0.0.1707.920@0.0.1707.920" timestamp="1619768387241" />
+    <state x="355" y="103" key="SettingsEditor" timestamp="1619554960334">
+      <screen x="0" y="0" width="1707" height="920" />
+    </state>
+    <state x="355" y="103" key="SettingsEditor/0.0.1707.920/2560.-221.1194.794@0.0.1707.920" timestamp="1619554960334" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fine_tune_mlm.py</url>
+          <line>184</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fine_tune_clm.py</url>
+          <line>415</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fine_tune_clm.py</url>
+          <line>422</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fine_tune_clm.py</url>
+          <line>423</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/fine_tune_clm.py</url>
+          <line>403</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
