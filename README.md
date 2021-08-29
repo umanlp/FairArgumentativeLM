@@ -1,4 +1,12 @@
-# MasterThesis
+
+<h1 align="center">
+<span>Master Thesis</span>
+</h1>
+
+<h3 align="center">
+<i>State Your Opinion, Not Your Prejudices:</i> On Multi-dimensional Adapter-based Debiasing of Argumentative Language Models
+</h3>
+
 
 ### Data Preparation
 The data preparation code is included in the directory - DataPreparation
@@ -36,3 +44,8 @@ Unset variable ''REDUCE_SET' if you are already using reduced test set for input
 - Decoding/generate.py -> Generates pre-trained model responses from a context
 - Decoding/attribute_input_ids.py -> Creates token ids of attribute words
 - Decoding/target_input_ids.py -> Creates token ids of target words
+
+---
+*Author contact information:*
+
+cholterm@mail.uni-mannheim.de
