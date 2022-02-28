@@ -1,12 +1,15 @@
 
 <h1 align="center">
-<span>Master Thesis</span>
+<span>Fair and Argumentative Language Modeling for Computational Argumentation</span>
 </h1>
 
-<h3 align="center">
-<i>State Your Opinion, Not Your Prejudices:</i> On Multi-dimensional Adapter-based Debiasing of Argumentative Language Models
-</h3>
+## Paper Abstract
+Although much work in NLP has focused on measuring and mitigating stereotypical bias in semantic spaces, research addressing bias in computational argumentation is still in its infancy. In this paper, we address this research gap and conduct a thorough investigation of bias in argumentative language models. To this end, we introduce \corpus, a novel resource for bias measurement specifically tailored to argumentation. We employ our resource to assess the effect of argumentative fine-tuning and debiasing on the intrinsic bias found in transformer-based language models using a lightweight adapter-based approach that is more sustainable and parameter-efficient than full fine-tuning. Finally, we analyze the potential impact of language model debiasing on the performance in argument quality prediction, a downstream task of computational argumentation. Our results show that we are able to successfully and sustainably remove bias in general and argumentative language models while preserving (and sometimes improving) model performance in downstream tasks.
 
+------------------------
+## Repository Description
+
+This code contains all code needed to reproduce the experiments and results reported in our paper.
 
 ### Data 
 
@@ -30,7 +33,22 @@ Includes all python files subject to this thesis
 
 Includes example shell files to run the python code
 
+------------------------
+## Citation
+
+```
+@inproceedings{FairAndArgLM,
+  title={Fair and Argumentative Language Modeling for Computational Argumentation},
+  author={Holtermann, Carolin and Lauscher, Anne and Ponzetto, Simone Paolo},
+  booktitle={...},
+  year={2022}
+}
+```
+
+
 ---
 *Author contact information:*
 
 cholterm@mail.uni-mannheim.de
+anne.lauscher@unibocconi.it
+simone@informatik.uni-mannheim.de
