@@ -21,18 +21,30 @@ This repository contains all code and data needed to reproduce the experiments a
     - This folder contains the CSV files of the IBM Rank and GAQ Corpus
 
 Additional Data sources used:
-- Wikipedia Dump
-- Args.me Corpus
-- Debate.org Corpus
-- CMV Corpus
-- IAC Corpus
+- [Wikipedia Dump](https://huggingface.co/datasets/wikipedia)
+- [Args.me Corpus](https://zenodo.org/record/4139439#.Yh0cQZPMITU)
+- [Debate.org Corpus](https://drive.google.com/drive/folders/1xZw7OUl1nD5CihWubxsqGxyoVhj0a-5k)
+- [CMV Corpus](https://zenodo.org/record/3778298#.Yh0ZHpPMIeY)
 
 **Note:** The computed language adapters could not be uploaded to GitHub due to size constraints. Find it on https://xxxx
 
 
 ### Code
 
-Includes all python files subject to this thesis
+Includes all python files and notebooks subject to this paper.
+
+A brief description of files in code/adapter_based_debiasing is:
+
+- **cda_dataframe_creation.py**
+    - This script creates test the datasets augmented with counterfactually biased sentences using different CDA strategies. Using the predefined target terms, it creates the CDA datasets from a certain input data set.
+- **cda_train_test_split.py**
+    - This script splits the previously created CDA dataset into a train and a test portion without reordering the sentences.
+- **debias_clm.py**
+    - This script is based on the run_clm.py script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train a debiased language model adapter using a causal language modeling loss.
+- **debias_mlm.py**
+    - This script is based on the run_mlm.py script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train a debiased language model adapter using a masked language modeling loss.
+
+
 
 
 ### Shell Files
@@ -55,6 +67,6 @@ Includes example shell files to run the python code
 ---
 *Author contact information:*
 
-cholterm@mail.uni-mannheim.de \\
-anne.lauscher@unibocconi.it \\
+cholterm@mail.uni-mannheim.de  
+anne.lauscher@unibocconi.it  
 simone@informatik.uni-mannheim.de
