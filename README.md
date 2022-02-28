@@ -9,20 +9,26 @@ Although much work in NLP has focused on measuring and mitigating stereotypical 
 ------------------------
 ## Repository Description
 
-This code contains all code needed to reproduce the experiments and results reported in our paper.
+This repository contains all code and data needed to reproduce the experiments and results reported in our paper.
 
 ### Data 
 
-- ABBA -> contains the annotated CSV files of the Queerness and Religious bias dimension
-- target_term_pairs -> contains the target term pairs used for CDA and creation of the ABBA test set
-- argument_quality -> contains the CSV files of the IBM Rank and GAQ Corpus
+- **ABBA** 
+    - This folder contains the annotated CSV files of the Queerphobia and Islamophobia bias dimension
+- **target_term_pairs** 
+    - This folder contains the target term pairs used for CDA and creation of the ABBA test set
+- **argument_quality** 
+    - This folder contains the CSV files of the IBM Rank and GAQ Corpus
 
-Other data files were unfortunatelly too big to share over GitHub. These include:
+Additional Data sources used:
 - Wikipedia Dump
 - Args.me Corpus
 - Debate.org Corpus
 - CMV Corpus
 - IAC Corpus
+
+**Note:** The computed language adapters could not be uploaded to GitHub due to size constraints. Find it on https://xxxx
+
 
 ### Code
 
@@ -49,6 +55,6 @@ Includes example shell files to run the python code
 ---
 *Author contact information:*
 
-cholterm@mail.uni-mannheim.de
-anne.lauscher@unibocconi.it
+cholterm@mail.uni-mannheim.de \\
+anne.lauscher@unibocconi.it \\
 simone@informatik.uni-mannheim.de
