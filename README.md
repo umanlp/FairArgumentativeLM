@@ -33,17 +33,40 @@ Additional Data sources used:
 
 Includes all python files and notebooks subject to this paper.
 
-A brief description of files in code/adapter_based_debiasing is:
+A brief description of the files in code/adapter_based_debiasing is:
 
 - **cda_dataframe_creation.py**
-    - This script creates test the datasets augmented with counterfactually biased sentences using different CDA strategies. Using the predefined target terms, it creates the CDA datasets from a certain input data set.
+    - This script creates the datasets augmented with counterfactually biased sentences using different CDA strategies. Using the predefined target terms, it creates the CDA datasets from a certain input data set.
 - **cda_train_test_split.py**
     - This script splits the previously created CDA dataset into a train and a test portion without reordering the sentences.
 - **debias_clm.py**
-    - This script is based on the run_clm.py script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train a debiased language model adapter using a causal language modeling loss.
+    - This script is based on the *run_clm.py* script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train a debiased language model adapter using a causal language modeling loss.
 - **debias_mlm.py**
-    - This script is based on the run_mlm.py script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train a debiased language model adapter using a masked language modeling loss.
+    - This script is based on the *run_mlm.py* script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train a debiased language model adapter using a masked language modeling loss.
 
+
+A brief description of the files in code/argumentative_language_modeling is:
+
+- **fine_tune_clm_adapter.py**
+    - This script is based on the *run_clm.py* script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train an argumentative language model adapter using a causal language modeling loss.
+- **fine_tune_mlm_adapter.py**
+    - This script is based on the *run_mlm.py* script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train an argumentative debiased language model adapter using a masked language modeling loss.
+
+
+A brief description of the files in code/argument_quality_prediction is:
+
+- **prepare_aq_dataframes.py**
+    - This script prepares the datasets used to train and test the models on the downstream task of argument quality prediction.
+- **argument_quality_prediction.py**
+    - This script is based on the *run_glue.py* script of the Adapter Hu, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of a language adapter to predict the argument quality of a text as a value between [0,1].
+- **argument_quality_prediction_fusion.py**
+    - This script is based on the *run_glue.py* script of the Adapter Hu, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of a fused layer consisting of two language adapters in this case the argumentative and debiased adapters to predict the argument quality of a text as a value between [0,1].
+- **argument_quality_prediction_stacking.py**
+    - This script is based on the *run_glue.py* script of the Adapter Hu, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of two stacked language adapters (argumentative & debiased) to predict the argument quality of a text as a value between [0,1].
+- **hyperparameter_evaluation.py**
+    - This script is used to access all evaluation files of the argument quality training and return the hyperparameters of the best run. 
+- **calculate_average_result.py**
+    - This script is used to calculate the mean result of the runs using different initial seeds, as well as the confidence interval of the mean result.
 
 
 
