@@ -33,6 +33,12 @@ Additional Data sources used:
 
 Includes all python files and notebooks subject to this paper.
 
+A brief description of the files in code/bias_evaluation is:
+
+- **calculate_language_model_bias.ipynb**
+    - This notebook can be used to evaluate the language model bias of different model architectures using the ABBA annotation corpus as a test set. This is done by calculating the models perplexity for stereotypically and anti-stereotypically biased sentences and performing a paired t-test on the results.
+
+
 A brief description of the files in code/adapter_based_debiasing is:
 
 - **cda_dataframe_creation.py**
@@ -58,16 +64,26 @@ A brief description of the files in code/argument_quality_prediction is:
 - **prepare_aq_dataframes.py**
     - This script prepares the datasets used to train and test the models on the downstream task of argument quality prediction.
 - **argument_quality_prediction.py**
-    - This script is based on the *run_glue.py* script of the Adapter Hu, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of a language adapter to predict the argument quality of a text as a value between [0,1].
+    - This script is based on the *run_glue.py* script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of a language adapter to predict the argument quality of a text as a value between [0,1].
 - **argument_quality_prediction_fusion.py**
-    - This script is based on the *run_glue.py* script of the Adapter Hu, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of a fused layer consisting of two language adapters in this case the argumentative and debiased adapters to predict the argument quality of a text as a value between [0,1].
+    - This script is based on the *run_glue.py* script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of a fused layer consisting of two language adapters in this case the argumentative and debiased adapters to predict the argument quality of a text as a value between [0,1].
 - **argument_quality_prediction_stacking.py**
-    - This script is based on the *run_glue.py* script of the Adapter Hu, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of two stacked language adapters (argumentative & debiased) to predict the argument quality of a text as a value between [0,1].
+    - This script is based on the *run_glue.py* script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/text-classification). It is used to train a regression adapter on top of two stacked language adapters (argumentative & debiased) to predict the argument quality of a text as a value between [0,1].
 - **hyperparameter_evaluation.py**
     - This script is used to access all evaluation files of the argument quality training and return the hyperparameters of the best run. 
 - **calculate_average_result.py**
     - This script is used to calculate the mean result of the runs using different initial seeds, as well as the confidence interval of the mean result.
 
+
+A brief description of the files in code/utils is:
+
+- **helper_functions.py**
+    - This script contains helper functions that are used multiple times in different other scripts related to this paper. It contains e.g., a function that creates the anti-sterotypically biased sentences based on the stereotypical biased sentences of the ABBA test set. 
+   
+- **target_terms.py**
+    - This script contains functions that return the target and attribute terms as arrays, which are used as vocabulary to identify stereotypically biased sentences for the two evaluated bias types. 
+    
+    
 
 
 ### Shell Files

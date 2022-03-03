@@ -1,5 +1,5 @@
-# Retrieve Sexual Bias Target Terms
-def sexual_bias_tt():
+# Retrieve Queerphobia Bias Target Terms
+def queerphobia_bias_tt():
     targets_1 = ["gay", "gays", "lesbian", "lesbians", "bisexual", "bisexuals", "homosexual", "homosexuals",
                 "transgender", "transgenders", "sapphic", "sapphics", "pansexual", "pansexuals", "queer", "queers",
                 "genderqueer", "genderqueers", "transsexual", "transsexuals", "crosssexual", "crosssexuals", "epicene",
@@ -25,8 +25,8 @@ def sexual_bias_tt():
     return targets_1, targets_2, attributes_1, attributes_2
 
 
-# Retrieve Religious Bias Target Terms
-def religious_bias_tt():
+# Retrieve Islamophobia Bias Target Terms
+def islamophobia_bias_tt():
     targets_1 = ["muslim", "muslims", "islam", "islamic", "islamism"]
     targets_2 = ["christian", "christians", "christianity"]
     attributes_1 = ["terrorist", "terrorism", "threat", "threaten", "dangerous", "deadly", "attack", "bomb", "murder",

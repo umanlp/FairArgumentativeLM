@@ -130,9 +130,9 @@ def main():
     tt_dir_sb = '../data/target_term_pairs/Target_Term_Pairs_Sexual_Orientation.csv'
     tt_dir_rb = '../data/target_term_pairs/Target_Term_Pairs_Religious_Bias.csv'
 
-    if args.bias_type == 'religious':
+    if args.bias_type == 'islamophobia':
         # Retrieve cartesian product of target terms
-        t1, t2, a1, a2 = religious_bias_tt()
+        t1, t2, a1, a2 = islamophobia_bias_tt()
         t1 = [x.lower() for x in t1]
         a1 = [x.lower() for x in a1]
 
@@ -141,9 +141,9 @@ def main():
         # Retrieve Target Term Pairs
         tt_pairs = pd.read_csv(tt_dir_rb)
 
-    elif args.bias_type == 'sexual':
+    elif args.bias_type == 'queerphobia':
         # Retrieve cartesian product of target terms
-        t1, t2, a1, a2 = sexual_bias_tt()
+        t1, t2, a1, a2 = queerphobia_bias_tt()
         t1 = [x.lower() for x in t1]
         a1 = [x.lower() for x in a1]
 
