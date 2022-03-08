@@ -2,6 +2,9 @@ import itertools
 import pandas as pd
 import re
 from scipy import stats
+from tqdm import tqdm
+import logging
+import json_lines
 
 def cartesianProductList(list1, list2):
     """
@@ -218,3 +221,87 @@ def prepare_annotation_df(annotation_frame_dir, target_term_dir):
     print("Dataframe prepared!")
 
     return df
+
+# Extract data from the debate.org json files. This function is reused from the code of the debates.org paper
+def extract_data(debates_data: dict, users_data: dict) -> pd.DataFrame:
+    """Extract and combines debates and user data into a single dataframe. Return the dataframe.
+    Currently, only the birthday, education, gender and political orientation are extracted and
+    returned as user-defining features.
+    Arguments:
+    debates_data -- Dictionary containing the debates data.
+    users_data -- Dictionary containing the users and their properties.
+    """
+    extracted_data = []
+    properties_of_interest = ["birthday", "ethnicity", "gender", "political_ideology", "education",
+                              "interested", "income", "looking", "party", "relationship", "win_ratio",
+                              "religious_ideology", "number_of_all_debates", "big_issues_dict"]
+
+    for key, debate in tqdm(debates_data.items()):
+        # Sometimes, the users of the debate didn't exist anymore at the time
+        # the data was collected.
+        try:
+            category = debate["category"]
+        except KeyError:
+            category = None
+
+        try:
+            title = debate["title"]
+        except KeyError:
+            title = None
+
+        try:
+            date = debate["start_date"]
+        except KeyError:
+            date = None
+
+        try:
+            user1 = users_data[debate["participant_1_name"]]
+        except KeyError:
+            user1 = None
+
+        try:
+            user2 = users_data[debate["participant_2_name"]]
+        except KeyError:
+            user2 = None
+
+        # If both users do not exist, skip this debate
+        if not user1 and not user2:
+            logging.debug("Both users are absent from debate data. Skipping.")
+            continue
+
+        # For each round in this debate...
+        for debate_round in debate["rounds"]:
+            # For each argument in this round...
+            for argument in debate_round:
+                arguing_user = (
+                    user1 if argument["side"] == debate["participant_1_position"] else user2)
+
+                arguing_user_name = (
+                    debate["participant_1_name"] if argument["side"] == debate["participant_1_position"] else debate[
+                        "participant_2_name"])
+
+                # Skip this argument if arguing user does not exist in the dta
+                if not arguing_user:
+                    continue
+
+                # Filtering for votes
+                votes = []
+                for vote in debate['votes']:
+                    votes.append(vote['votes_map'][arguing_user_name])
+
+                # Filtering for relevant properties
+                properties = {
+                    key: value
+                    for key, value in arguing_user.items() if key in properties_of_interest}
+
+                # Save the text and find the political ideology of the user.
+                extracted_data.append({
+                    "argument": argument["text"],
+                    "title": title,
+                    "category": category,
+                    "date": date,
+                    **properties,
+                    "votes": votes})
+
+    return pd.DataFrame(columns=["argument", "title", "category", "date", *properties_of_interest, "votes"],
+                        data=extracted_data)
