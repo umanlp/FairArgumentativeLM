@@ -51,6 +51,14 @@ A brief description of the files in code/adapter_based_debiasing is:
     - This script is based on the *run_mlm.py* script of the Adapter Hub, which can be found [here](https://github.com/Adapter-Hub/adapter-transformers/tree/master/examples/language-modeling). It is used to train a debiased language model adapter using a masked language modeling loss.
 
 
+A brief description of the files in code/annotation_study is:
+
+- **create_annotation_df.ipynb**
+    - This notebook includes the steps performed to create the annotation dataframe from the arguments of the debate.org data set.
+- **analyze_ABBA_corpus.ipynb**
+    - This notebook provides some insights in the distribution of biased and unbiased sentences of the ABBA corpus as well as information about the debaters that wrote the arguments.
+
+
 A brief description of the files in code/argumentative_language_modeling is:
 
 - **fine_tune_clm_adapter.py**
@@ -79,7 +87,6 @@ A brief description of the files in code/utils is:
 
 - **helper_functions.py**
     - This script contains helper functions that are used multiple times in different other scripts related to this paper. It contains e.g., a function that creates the anti-sterotypically biased sentences based on the stereotypical biased sentences of the ABBA test set. 
-   
 - **target_terms.py**
     - This script contains functions that return the target and attribute terms as arrays, which are used as vocabulary to identify stereotypically biased sentences for the two evaluated bias types. 
     
