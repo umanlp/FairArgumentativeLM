@@ -26,7 +26,7 @@ Additional Data sources used:
 - [Debate.org Corpus](https://drive.google.com/drive/folders/1xZw7OUl1nD5CihWubxsqGxyoVhj0a-5k)
 - [CMV Corpus](https://zenodo.org/record/3778298#.Yh0ZHpPMIeY)
 
-**Note:** The computed language adapters could not be uploaded to GitHub due to size constraints. Find it on https://xxxx
+**Note:** The computed language adapters could not be uploaded to GitHub due to size constraints. You can find them on MADATA: https://madata.bib.uni-mannheim.de/id/eprint/390
 
 
 ### Code
